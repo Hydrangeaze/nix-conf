@@ -5,6 +5,7 @@
   	./treesitter.nix
 	./cmp.nix
 	./lsp.nix
+	./nvim-tree.nix
 	./options.nix
   ];
   programs.nixvim = {
@@ -48,21 +49,19 @@
     globals.mapleader = " ";
 
     extraPlugins = with pkgs.vimPlugins; [
-#    	monokai-pro-nvim
         {
           plugin = comment-nvim;
           config = "lua require(\"Comment\").setup()";
       	}
     ];
-    colorschemes.ayu.enable = true;
+    colorschemes.oxocarbon.enable = true;    
 #    extraConfigLua = ''
-#        require("monokai-pro").setup({
+#        require("aurora").setup({
 #         	-- ... your config
 #        })
 #        -- lua
-#        vim.cmd([[colorscheme monokai-pro]])
+#        vim.cmd([[colorscheme aurora]])
 #    '';
-
     keymaps = [
       # Global Mappings
       # Default mode is "" which means normal-visual-op

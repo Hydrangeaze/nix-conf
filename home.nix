@@ -29,14 +29,20 @@
       '';
     };
     
-#    xdg.desktopEntries = {
+    xdg.desktopEntries = {
 #    	discord = {
 #    		name = "Discord";
 #    		genericName = "idk video messenger";
 #    		exec = "discord  --enable-features=UseOzonePlatform --ozone-platform=wayland"; 	
 #    		terminal = false;
 #    	};	
-#    };
+	nvim = {
+	   name = "Nvim";
+	   genericName = "neovim in terminal";
+	   exec = "kitty -e neovim";
+	   terminal = true;
+	};
+    };
     
     gtk.enable = true;
     gtk.theme.package = pkgs.graphite-gtk-theme;

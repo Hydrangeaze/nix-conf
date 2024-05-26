@@ -76,10 +76,7 @@ in
 
   services.printing.enable = true;
   services.libinput.enable = true;
- 
-  users.defaultUserShell = pkgs.zsh;
-  programs.zsh.shellInit = "fastfetch";
-  environment.shells = with pkgs; [ zsh ];
+ users.defaultUserShell = pkgs.zsh; programs.zsh.shellInit = "fastfetch"; environment.shells = with pkgs; [ zsh ];
   programs.zsh.enable = true;
 
   users.users.${user} = {
@@ -95,6 +92,8 @@ in
   programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
 
+  security.pam.services.gdm.enableGnomeKeyring = true;
+  services.gnome.gnome-keyring.enable = true;
   systemd.tmpfiles.rules = [
   
       "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
@@ -146,6 +145,8 @@ in
 	gh
 	xwayland
 	bluez5-experimental 
+	discordo
+	tg
 	bluez-tools
 	bluez-alsa
 	bluetuith
@@ -181,6 +182,8 @@ in
 	rofi
 	emacsPackages.alsamixer
 	hyprpaper
+	gnome.gnome-keyring
+	libsecret
 	tofi
 	hyprland
 	xdg-desktop-portal-wlr

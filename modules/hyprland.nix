@@ -4,11 +4,11 @@
 	xkb.layout = "us, ru";
 	xkb.options = "grp:alt_shift_toggle";
 	enable = true;
-	displayManager.gdm = {
-		enable = true;
-		wayland = true;
-		autoSuspend = true;
-	};
+  };
+  services.displayManager.sddm = {
+  	enable = true;
+  	wayland.enable = true;
+  	theme = "where-is-my-sddm-theme";
   };
 
   programs.hyprland = {

@@ -102,6 +102,7 @@ in
   nixpkgs.config.allowUnfree = true;
    virtualisation.virtualbox.host.enable = true;
    users.extraGroups.vboxusers.members = [ "${user}" ]; 
+  services.gvfs.enable = true;
 
   environment.systemPackages = with pkgs; [
     #MAIN 
@@ -114,12 +115,21 @@ in
 	curl
 	distrobox
 	wget
+	where-is-my-sddm-theme
+	jmtpfs
+	spotdl
+	gvfs
 	git
 	#unstable.osu-lazer-bin
 	osu-lazer-bin
 	librewolf
+	toybox
+	syncthing
 	fastfetch
+	rpm
+	cpio
 	zsh
+	xfce.thunar-volman
 	keepassxc
 	gparted
 	unityhub
@@ -150,6 +160,8 @@ in
 	bluez-tools
 	bluez-alsa
 	bluetuith
+	ytmdl
+	strawberry
 	spotify
 	evince
 	libsForQt5.qt5.qtwayland

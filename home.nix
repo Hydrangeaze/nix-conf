@@ -74,9 +74,9 @@
       shellAliases = {
         ll = "ls -l";
         update = "sudo nixos-rebuild switch --flake /home/${user}/.config/nixos/.#hydrangea";
-        nix-conf = "sudo nvim /etc/nixos/configuration.nix";
-        hypr-conf = "nvim $HOME/.config/hypr/hyprland.conf";
-        wayb-conf = "nvim $HOME/.config/waybar/config";
+        nix-conf = "sudo nvim $HOME.config/nixos/configuration.nix";
+        hypr-conf = "nvim $HOME/.config/nixos/dots/hypr/hyprland.conf";
+        wayb-conf = "nvim $HOME/.config/nixos/dots/waybar/config";
       };
 
 	  initExtra = ''

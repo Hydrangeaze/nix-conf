@@ -49,7 +49,7 @@
         "Telegram": " ",
         "Steam": " ",
         "Spotify - (.*)": "󰓇 ",
-	"kitty - (.*)": " ",
+	"kitty": " ",
         "Spotify": "󰓇 ",
         "(.*) - Discord": "",
         "Discord": ""
@@ -139,7 +139,7 @@
       "format-ru": "🇷🇺",
     },
     "image#avatar": {
-      "path": "$HOME/.config/waybar/icon/furudo.jpg",
+      "path": "/home/hydrangea/.config/waybar/icon/erika_64.png",
       "size": 20,
       "interval": 500
     },

@@ -49,7 +49,7 @@
         "Telegram": " ",
         "Steam": " ",
         "Spotify - (.*)": "󰓇 ",
-	"kitty - (.*)": " "
+	"kitty - (.*)": " ",
         "Spotify": "󰓇 ",
         "(.*) - Discord": "",
         "Discord": ""
@@ -139,7 +139,7 @@
       "format-ru": "🇷🇺",
     },
     "image#avatar": {
-      "path": "$HOME/.config/nixos/dots/waybar/icon/erika_64.png",
+      "path": "$HOME/.config/waybar/icon/furudo.jpg",
       "size": 20,
       "interval": 500
     },

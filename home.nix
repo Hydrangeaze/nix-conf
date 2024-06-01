@@ -13,6 +13,7 @@
     home.file.".config/dunst/dunstrc".source = ./dots/dunst/dunstrc;
     home.file.".config/tofi/config".source = ./dots/tofi/config;
     home.file.".config/waybar/config".source = ./dots/waybar/config;
+    home.file.".config/waybar/icon/erika_64.png".source = ./dots/waybar/icon/erika_64.png;
     home.file.".config/waybar/style.css".source = ./dots/waybar/style.css;
     home.file.".config/alacritty/alacritty.toml".source = ./dots/alacritty/alacritty.toml;
     home.file.".config/hypr/hyprland.conf".source = ./dots/hypr/hyprland.conf;

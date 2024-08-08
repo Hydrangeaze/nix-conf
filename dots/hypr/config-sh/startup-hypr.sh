@@ -3,7 +3,10 @@
 #{ dunst; hyprpaper; waybar; hypridle; nm-applet; } &
 
 dunst &
-hyprpaper &
+#hyprpaper &
+swww-daemon &
 waybar &
 nm-applet --indicator &
 hypridle &
+
+swww img ../wallpaper/2.webm

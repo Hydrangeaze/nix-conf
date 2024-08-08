@@ -18,7 +18,9 @@
     home.file.".config/alacritty/alacritty.toml".source = ./dots/alacritty/alacritty.toml;
     home.file.".config/hypr/hyprland.conf".source = ./dots/hypr/hyprland.conf;
     home.file.".config/hypr/hypridle.conf".source = ./dots/hypr/hypridle.conf;
-    home.file.".config/hypr/hyprpaper.conf".source = ./dots/hypr/hyprpaper.conf;
+    #home.file.".config/hypr/hyprpaper.conf".source = ./dots/hypr/hyprpaper.conf;
+    home.file.".config/hypr/swww.sh".source = ./dots/hypr/swww.sh;
+    home.file.".config/hypr/wallpaper/2.mp4".source = ./dots/hypr/wallpaper/2.mp4;
     home.file.".config/hypr/wallpaper/1.jpg".source = ./dots/hypr/wallpaper/1.jpg;
     home.file.".config/hypr/config-sh/r_waybar.sh".source = ./dots/hypr/config-sh/r_waybar.sh;
     home.file.".config/hypr/config-sh/startup-hypr.sh".source = ./dots/hypr/config-sh/startup-hypr.sh;

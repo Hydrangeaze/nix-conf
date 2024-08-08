@@ -22,6 +22,7 @@ in
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.configurationLimit = 10;
   boot.loader.timeout = 5;
+  boot.kernelPackages = pkgs.linuxPackages_6_8;
   
   nix.optimise.automatic = true;
   nix.optimise.dates = [ "16:00" ];
@@ -104,6 +105,8 @@ in
    users.extraGroups.vboxusers.members = [ "${user}" ]; 
   services.gvfs.enable = true;
 
+
+
   environment.systemPackages = with pkgs; [
     #MAIN 
     	virtualbox
@@ -122,10 +125,18 @@ in
 	git
 	#unstable.osu-lazer-bin
 	osu-lazer-bin
+	jetbrains.pycharm-community-src
+	zip
 	librewolf
+	mediawriter
 	toybox
+	woeusb
+	ventoy-full
+	isoimagewriter
+	unetbootin
 	syncthing
 	fastfetch
+	vivaldi
 	rpm
 	cpio
 	zsh

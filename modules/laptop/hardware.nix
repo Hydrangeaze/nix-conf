@@ -8,7 +8,6 @@
       amdvlk
 	 driversi686Linux.amdvlk
     ];
-    driSupport = true;
     driSupport32Bit = true;
   };
 }

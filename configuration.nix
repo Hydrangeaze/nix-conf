@@ -22,7 +22,7 @@ in
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.configurationLimit = 10;
   boot.loader.timeout = 5;
-  boot.kernelPackages = pkgs.linuxPackages_6_8;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   
   nix.optimise.automatic = true;
   nix.optimise.dates = [ "16:00" ];
@@ -75,6 +75,10 @@ in
 
   hardware.opentabletdriver.enable = true;
 
+  services.tor = {
+    enable = true;
+    openFirewall = true;
+  };
   services.printing.enable = true;
   services.libinput.enable = true;
  users.defaultUserShell = pkgs.zsh; programs.zsh.shellInit = "fastfetch"; environment.shells = with pkgs; [ zsh ];
@@ -117,26 +121,24 @@ in
 	mpv
 	curl
 	distrobox
+	hwinfo
 	wget
-	where-is-my-sddm-theme
 	jmtpfs
 	spotdl
 	gvfs
 	git
 	#unstable.osu-lazer-bin
+	tor-browser
 	osu-lazer-bin
+	zoom-us
 	jetbrains.pycharm-community-src
 	zip
-	librewolf
+	#librewolf
 	mediawriter
 	toybox
-	woeusb
 	ventoy-full
-	isoimagewriter
-	unetbootin
 	syncthing
 	fastfetch
-	vivaldi
 	rpm
 	cpio
 	zsh
@@ -144,7 +146,7 @@ in
 	keepassxc
 	gparted
 	unityhub
-	jetbrains.rider
+	#jetbrains.rider
 	dotnet-sdk_8	
 	dotnet-runtime_8
 	dotnet-aspnetcore_8
@@ -156,7 +158,6 @@ in
 	vscodium
 	playerctl
 	qbittorrent-qt5
-        steamPackages.steamcmd
 	zplug
 	steam
 	blender-hip
@@ -166,13 +167,12 @@ in
 	gh
 	xwayland
 	bluez5-experimental 
-	discordo
 	tg
 	bluez-tools
 	bluez-alsa
 	bluetuith
 	ytmdl
-	strawberry
+	yt-dlp-light
 	spotify
 	evince
 	libsForQt5.qt5.qtwayland
@@ -184,14 +184,13 @@ in
 	wireguard-tools
 	grimblast
 	lf
-	inkscape
 	python3
 	krita
 	imv
 	unzip
 	p7zip
 	bottles
-	pureref
+	#pureref
 	#OPTIONAL
 	waybar-mpris
 	ani-cli

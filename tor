@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+nix shell -I nixpkgs=. .#tor-browser -c bash -c '$(''dirname $(which tor-browser)'')/../share/tor-browser/TorBrowser/Tor/PluggableTransports/lyrebird --help || false'

@@ -78,6 +78,11 @@ in
   services.tor = {
     enable = true;
     openFirewall = true;
+    settings = {
+      UseBridges = true;	
+      ClientTransportPlugin = "obfs4 exec ${pkgs.obfs4}/bin/lyrebird";
+      Bridge = "obfs4 91.134.101.206:60326 CF5658625C4A94A9A1168BA80A8EF93D536ABAF7";
+    };
   };
   services.printing.enable = true;
   services.libinput.enable = true;

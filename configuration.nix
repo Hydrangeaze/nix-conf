@@ -209,7 +209,7 @@ in
 	rofi
 	emacsPackages.alsamixer
 	hyprpaper
-	gnome.gnome-keyring
+	gnome-keyring
 	libsecret
 	tofi
 	hyprland

@@ -11,12 +11,14 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-stable, ... }@inputs:
     let
           system = "x86_64-linux";
           pkgs = nixpkgs.legacyPackages.${system};
+	  unstable-pkgs = nixpkgs-stable.legacyPackages.${system};
    in
    {
     nixosConfigurations.hydrangea = nixpkgs.lib.nixosSystem {
@@ -26,8 +28,8 @@
         ./configuration.nix
         inputs.home-manager.nixosModules.default
 	inputs.nixvim.nixosModules.nixvim
-	inputs.tor-browser
       ];
+      environment.systemPackages = [ unstable-pkgs.tor-browser ];
     };
   };
 }

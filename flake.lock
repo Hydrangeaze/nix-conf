@@ -258,7 +258,8 @@
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "nixvim": "nixvim"
+        "nixvim": "nixvim",
+        "tor-browser": "tor-browser"
       }
     },
     "systems": {
@@ -273,6 +274,22 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "tor-browser": {
+      "locked": {
+        "lastModified": 1725037410,
+        "narHash": "sha256-6sD/QmpcCZgPqd6AwDBMMqRDBYbHCYtSe97ZAxc9OYg=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "cda8a98a72cf0bf2591283526e8522d7fd822f1b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "master",
+        "repo": "nixpkgs",
         "type": "github"
       }
     },

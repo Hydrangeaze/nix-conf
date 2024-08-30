@@ -11,10 +11,6 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    tor-browser = {
-			url = "github:nixos/nixpkgs/master";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
   };
 
   outputs = { self, nixpkgs, ... }@inputs:

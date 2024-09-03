@@ -77,11 +77,11 @@ in
 
   services.tor = {
     enable = true;
-    openFirewall = true;
-    settings = {
-      UseBridges = true;	
-      ClientTransportPlugin = "obfs4 exec ${pkgs.obfs4}/bin/lyrebird";
-      Bridge = "obfs4 91.134.101.206:60326 CF5658625C4A94A9A1168BA80A8EF93D536ABAF7";
+    enableGeoIP = false;
+    settings ={
+	UseBridges = true;
+	ClientTransportPlugin = "obfs4 exec ${pkgs.obfs4}/bin/lyrebird";
+	Bridge = [ "obfs4 57.128.103.61:32950 4F86D9622E8A0E8B4205B89EF85F7DB8B7CC0220" "obfs4 57.128.71.12:10565 8C4FDB79FEE41F0B597EEF8EA5A3799BBECD030A" "obfs4 15.235.41.173:13042 2B6931247E4A2ECD752D23779695BAD4AC458667" "obfs4 141.95.109.65:45241 9AB77274A9BBA67451C3BAB1D965E5EA7DACCC54" "obfs4 77.23.114.134:5527 5B74F685B02681064C4F8FE3DE9CD8F50FFE4BF5"];
     };
   };
   services.printing.enable = true;
@@ -132,13 +132,14 @@ in
 	spotdl
 	gvfs
 	git
+	freetube
 	#unstable.osu-lazer-bin
 	tor-browser
 	osu-lazer-bin
 	zoom-us
 	jetbrains.pycharm-community-src
 	zip
-	#librewolf
+	librewolf
 	mediawriter
 	toybox
 	ventoy-full

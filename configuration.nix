@@ -209,7 +209,7 @@ in
 	jq
 	rofi
 	emacsPackages.alsamixer
-	hyprpaper
+		#hyprpaper
 	gnome-keyring
 	libsecret
 	tofi

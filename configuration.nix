@@ -9,6 +9,7 @@ in
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
       ./modules/nvim/nvim-modules.nix
+      ./modules/service.nix
       ./modules/systemd.nix
       ./modules/laptop/power_managment.nix
       ./modules/laptop/hardware.nix
@@ -75,15 +76,6 @@ in
 
   hardware.opentabletdriver.enable = true;
 
-  services.tor = {
-    enable = true;
-    enableGeoIP = false;
-    settings ={
-	UseBridges = true;
-	ClientTransportPlugin = "obfs4 exec ${pkgs.obfs4}/bin/lyrebird";
-	Bridge = [ "obfs4 57.128.103.61:32950 4F86D9622E8A0E8B4205B89EF85F7DB8B7CC0220" "obfs4 57.128.71.12:10565 8C4FDB79FEE41F0B597EEF8EA5A3799BBECD030A" "obfs4 15.235.41.173:13042 2B6931247E4A2ECD752D23779695BAD4AC458667" "obfs4 141.95.109.65:45241 9AB77274A9BBA67451C3BAB1D965E5EA7DACCC54" "obfs4 77.23.114.134:5527 5B74F685B02681064C4F8FE3DE9CD8F50FFE4BF5"];
-    };
-  };
   services.printing.enable = true;
   services.libinput.enable = true;
  users.defaultUserShell = pkgs.zsh; programs.zsh.shellInit = "fastfetch"; environment.shells = with pkgs; [ zsh ];
@@ -184,6 +176,7 @@ in
 	libsForQt5.qt5.qtwayland
 	libsForQt5.qt5ct
 	armcord
+	foliate
 	upower
 	qt6.qtwayland
 	xfce.thunar
@@ -209,7 +202,7 @@ in
 	jq
 	rofi
 	emacsPackages.alsamixer
-		#hyprpaper
+	hyprpaper
 	gnome-keyring
 	libsecret
 	tofi

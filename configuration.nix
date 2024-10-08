@@ -11,6 +11,7 @@ in
       ./modules/nvim/nvim-modules.nix
       ./modules/service.nix
       ./modules/systemd.nix
+      ./modules/tor.nix
       ./modules/laptop/power_managment.nix
       ./modules/laptop/hardware.nix
       ./modules/laptop/bluetooth.nix
@@ -85,9 +86,8 @@ in
     isNormalUser = true;
     description = "hydrangea";
     extraGroups = [ "networkmanager" "wheel" "video" ];
-    packages = with pkgs; [
-      firefox
-    ];
+		#packages = with pkgs; [
+		#];
   };
 
   programs.steam.enable = true;
@@ -116,6 +116,7 @@ in
 	anki-bin
 	telegram-desktop
 	mpv
+	rustup
 	curl
 	distrobox
 	hwinfo
@@ -125,14 +126,18 @@ in
 	gvfs
 	git
 	freetube
-	#unstable.osu-lazer-bin
 	tor-browser
+	signal-desktop
 	osu-lazer-bin
+	brave
+	aircrack-ng
+	genymotion
+	android-tools
+	twitch-dl
 	zoom-us
-	jetbrains.pycharm-community-src
 	zip
 	librewolf
-	mediawriter
+	vscode-extensions.rust-lang.rust-analyzer
 	toybox
 	ventoy-full
 	syncthing
@@ -153,7 +158,6 @@ in
 	opentabletdriver
 	ffmpeg
 	alsa-lib
-	vscodium
 	playerctl
 	qbittorrent-qt5
 	zplug
@@ -165,11 +169,9 @@ in
 	gh
 	xwayland
 	bluez5-experimental 
-	tg
 	bluez-tools
 	bluez-alsa
 	bluetuith
-	ytmdl
 	yt-dlp-light
 	spotify
 	evince
@@ -182,7 +184,6 @@ in
 	xfce.thunar
 	wireguard-tools
 	grimblast
-	lf
 	python3
 	krita
 	imv
@@ -199,7 +200,6 @@ in
 	xdg-desktop-portal-gtk
 	kitty
 	pavucontrol
-	jq
 	rofi
 	emacsPackages.alsamixer
 	hyprpaper

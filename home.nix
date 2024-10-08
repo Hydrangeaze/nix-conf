@@ -56,7 +56,16 @@
     gtk.theme.name = "Graphite-Dark";
     gtk.cursorTheme.package = pkgs.bibata-cursors;
     gtk.cursorTheme.name = "Bibata-Modern-Ice";
-    
+    programs.vscode = {
+ 	 enable = true;
+ 	 package = pkgs.vscodium;
+ 	 extensions = with pkgs.vscode-extensions; [
+    		dracula-theme.theme-dracula
+    		vscodevim.vim
+    		yzhang.markdown-all-in-one
+		rust-lang.rust-analyzer
+  	];
+    }; 
     programs.obs-studio = {
     	enable = true;
     	plugins = with pkgs.obs-studio-plugins; [

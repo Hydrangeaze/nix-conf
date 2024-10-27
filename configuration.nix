@@ -104,6 +104,10 @@ in
   nixpkgs.config.allowUnfree = true;
    virtualisation.virtualbox.host.enable = true;
    users.extraGroups.vboxusers.members = [ "${user}" ]; 
+
+
+	#virtualisation.docker.enable = true;
+
   services.gvfs.enable = true;
 
 
@@ -129,6 +133,9 @@ in
 	tor-browser
 	signal-desktop
 	osu-lazer-bin
+	lshw-gui
+	openssl_3_3
+	teamspeak5_client
 	brave
 	aircrack-ng
 	genymotion
@@ -137,7 +144,7 @@ in
 	zoom-us
 	zip
 	librewolf
-	vscode-extensions.rust-lang.rust-analyzer
+	element-desktop-wayland
 	toybox
 	ventoy-full
 	syncthing

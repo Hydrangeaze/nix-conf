@@ -37,12 +37,12 @@
     };
     
     xdg.desktopEntries = {
-#    	discord = {
-#    		name = "Discord";
-#    		genericName = "idk video messenger";
-#    		exec = "discord  --enable-features=UseOzonePlatform --ozone-platform=wayland"; 	
-#    		terminal = false;
-#    	};	
+    	armcord = {
+    		name = "ArmCord";
+    		genericName = "armcord with proxy";
+    		exec = "armcord --proxy-server=socks5://127.0.0.1:9063"; 	
+    		terminal = false;
+    	};	
 	nvim = {
 	   name = "Nvim";
 	   genericName = "neovim in terminal";
